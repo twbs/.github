@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  Bootstrap is the world's a powerful, extensible, and feature-packed frontend toolkit—<br>with a vast community of themes, extensions, plugins, and more.
+  Bootstrap is a powerful, extensible, and feature-packed frontend toolkit—<br>with a vast community of themes, extensions, plugins, and more.
 </p>
 
 <p align="center">
