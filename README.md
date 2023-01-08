@@ -1,249 +1,804 @@
-<!DOCTYPE html>
-<html lang="en-US">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width">
+# Node.js
 
-<title>บังชันเรดิโอ</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
-<script src="https://www.ondio.in/status/ondio2.js"></script>
-<meta name="dc.title" content="PGSLOT ALIEN สล็อตเว็บตรง มั่นคง ปลอดภัย" />
-<meta name="dc.description" content="สล็อตออนไลน์ เว็บตรง PGSLOT ALIEN ฝาก-ถอนด้วยระบบอัตโนมัติ พร้อมแอดมินคอยให้บริการตลอด24ชม. เล่นสล็อตออนไลน์ต้องมาตรฐานระดับสากล" />
-<meta name="dc.relation" content="https://www.pgslotalien.com/" />
-<meta name="dc.source" content="https://www.pgslotalien.com/" />
-<meta name="dc.language" content="en_US" />
-<meta name="description" content="สล็อตออนไลน์ เว็บตรง PGSLOT ALIEN ฝาก-ถอนด้วยระบบอัตโนมัติ พร้อมแอดมินคอยให้บริการตลอด24ชม. เล่นสล็อตออนไลน์ต้องมาตรฐานระดับสากล" />
-<meta name="robots" content="index, follow" />
-<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-<meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-<link rel="canonical" href="https://www.pgslotalien.com/" />
-<script type="application/ld+json">{
-				"@context": "https://schema.org",
-				"@type": "WebSite",
-				"url" : "https:\/\/www.pgslotalien.com",
-				"potentialAction": {
-					"@type": "SearchAction",
-					"target": "https:\/\/www.pgslotalien.com\/?s={search_term_string}",
-					"query-input": "required name=search_term_string"
-				}
-			}</script>
-<meta property="og:url" content="https://www.pgslotalien.com/" />
-<meta property="og:site_name" content="PGSLOT ALIEN" />
-<meta property="og:locale" content="en_US" />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="PGSLOT ALIEN สล็อตเว็บตรง มั่นคง ปลอดภัย" />
-<meta property="og:description" content="สล็อตออนไลน์ เว็บตรง PGSLOT ALIEN ฝาก-ถอนด้วยระบบอัตโนมัติ พร้อมแอดมินคอยให้บริการตลอด24ชม. เล่นสล็อตออนไลน์ต้องมาตรฐานระดับสากล" />
-<meta property="og:image" content="https://www.pgslotalien.com/wp-content/uploads/sites/72/2021/11/www.pgslotalien.com-index-pgslotalien-1.png" />
-<meta property="og:image:secure_url" content="https://www.pgslotalien.com/wp-content/uploads/sites/72/2021/11/www.pgslotalien.com-index-pgslotalien-1.png" />
-<meta property="og:image:width" content="932" />
-<meta property="og:image:height" content="511" />
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="บังชันเรดิโอ" />
-<meta name="twitter:description" content="วิทยุออนไลน์ฟัง24ชม. " />
-<meta name="twitter:image" content="https://www.pgslotalien.com/wp-content/uploads/sites/72/2021/11/www.pgslotalien.com-index-pgslotalien-1.png" />
-<link rel='dns-prefetch' href='//fonts.googleapis.com' />
-<link rel='dns-prefetch' href='//s.w.org' />
-<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Organization","name":"PGSLOT ALIEN","url":"https:\/\/www.pgslotalien.com"}</script>
-<link rel='stylesheet' id='wp-block-library-css' href='https://www.pgslotalien.com/wp-includes/css/dist/block-library/style.min.css?ver=6.0.1' type='text/css' media='all' />
-<style id='global-styles-inline-css' type='text/css'>
-body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
-</style>
-<link rel='stylesheet' id='dashicons-css' href='https://www.pgslotalien.com/wp-includes/css/dashicons.min.css?ver=6.0.1' type='text/css' media='all' />
-<link rel='stylesheet' id='wpcp-slick-css' href='https://www.pgslotalien.com/wp-content/plugins/wp-carousel-pro/public/css/slick.min.css?ver=3.1.6' type='text/css' media='all' />
-<link rel='stylesheet' id='wpcp-bx-slider-css-css' href='https://www.pgslotalien.com/wp-content/plugins/wp-carousel-pro/public/css/jquery.bxslider.min.css?ver=3.1.6' type='text/css' media='all' />
-<link rel='stylesheet' id='wp-carousel-pro-fontawesome-css' href='https://www.pgslotalien.com/wp-content/plugins/wp-carousel-pro/public/css/font-awesome.min.css?ver=3.1.6' type='text/css' media='all' />
-<link rel='stylesheet' id='wpcp-magnific-popup-css' href='https://www.pgslotalien.com/wp-content/plugins/wp-carousel-pro/public/css/magnific-popup.min.css?ver=3.1.6' type='text/css' media='all' />
-<link rel='stylesheet' id='wp-carousel-pro-css' href='https://www.pgslotalien.com/wp-content/plugins/wp-carousel-pro/public/css/wp-carousel-pro-public.min.css?ver=3.1.6' type='text/css' media='all' />
-<link rel='stylesheet' id='catch-breadcrumb-css' href='https://www.pgslotalien.com/wp-content/plugins/catch-breadcrumb/public/css/catch-breadcrumb-public.css?ver=1.8' type='text/css' media='all' />
-<link rel='stylesheet' id='oxygen-css' href='https://www.pgslotalien.com/wp-content/plugins/oxygen/component-framework/oxygen.css?ver=3.8.1' type='text/css' media='all' />
-<link rel='stylesheet' id='pps_style-css' href='https://www.pgslotalien.com/wp-content/plugins/popup-press/css/pps_style.css?ver=2.9.8' type='text/css' media='screen' />
-<style id='pps_style-inline-css' type='text/css'>
+Node.js is an open-source, cross-platform JavaScript runtime environment.
 
-.pps-popup {
-}
-.pps-popup .pps-wrap {
-}
-.pps-popup .pps-wrap .pps-close {
-}
-.pps-popup .pps-wrap .pps-content {
-}
+For information on using Node.js, see the [Node.js website][].
 
-</style>
-<link rel='stylesheet' id='wp-cm-plugin-css' href='https://www.pgslotalien.com/wp-content/plugins/wp-cm-plugin/public/css/wp-cm-plugin-public.css?ver=1.0.0' type='text/css' media='all' />
-<link rel='stylesheet' id='rich-reviews-css' href='https://www.pgslotalien.com/wp-content/plugins/rich-reviews/css/rich-reviews.css?ver=6.0.1' type='text/css' media='all' />
-<link rel='stylesheet' id='SP_WPCP-google-web-fonts-sp_wpcp_shortcode_options-css' href='//fonts.googleapis.com/css?family=Open+Sans%3A600%7COpen+Sans%3A600%7COpen+Sans%3A400n%7COpen+Sans%3A600%7COpen+Sans%3A400%7COpen+Sans%3A600%7COpen+Sans%3A400%7COpen+Sans%3A600%7COpen+Sans%3A400%7COpen+Sans%3A400%7COpen+Sans%3A700%7COpen+Sans%3A600' type='text/css' media='all' />
-<script type='text/javascript' src='https://www.pgslotalien.com/wp-includes/js/jquery/jquery.min.js?ver=3.6.0' id='jquery-core-js'></script>
-<script type='text/javascript' id='catch-breadcrumb-js-extra'>
-/* <![CDATA[ */
-var catch_breadcrumb_object = {"breadcrumb_separator":">","breadcrumb_home_icon":"0","breadcrumb_display_home":"0","content_selector":"#content","status":"1","breadcrumb_dynamic":"before"};
-/* ]]> */
-</script>
-<script type='text/javascript' src='https://www.pgslotalien.com/wp-content/plugins/catch-breadcrumb/public/js/catch-breadcrumb-public.js?ver=1.8' id='catch-breadcrumb-js'></script>
-<script type='text/javascript' src='https://www.pgslotalien.com/wp-content/plugins/wp-cm-plugin/public/js/wp-cm-plugin-public.js?ver=1.0.0' id='wp-cm-plugin-js'></script>
-<script type='text/javascript' id='rich-reviews-js-extra'>
-/* <![CDATA[ */
-var php_vars = {"excerpt_length":"150","maybe_some_other_stuff":"Probably Not"};
-var translation = {"read_more":"Read More","less":"Less"};
-/* ]]> */
-</script>
-<script type='text/javascript' src='https://www.pgslotalien.com/wp-content/plugins/rich-reviews/js/rich-reviews.js?ver=6.0.1' id='rich-reviews-js'></script>
-<link rel="https://api.w.org/" href="https://www.pgslotalien.com/wp-json/" /><link rel="alternate" type="application/json" href="https://www.pgslotalien.com/wp-json/wp/v2/pages/410" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.pgslotalien.com/xmlrpc.php?rsd" />
-<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.pgslotalien.com/wp-includes/wlwmanifest.xml" />
-<meta name="generator" content="WordPress 6.0.1" />
-<link rel='shortlink' href='https://www.pgslotalien.com/' />
-<link rel="alternate" type="application/json+oembed" href="https://www.pgslotalien.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.pgslotalien.com%2F" />
-<link rel="alternate" type="text/xml+oembed" href="https://www.pgslotalien.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.pgslotalien.com%2F&#038;format=xml" />
+The Node.js project uses an [open governance model](./GOVERNANCE.md). The
+[OpenJS Foundation][] provides support for the project.
 
+**This project has a [Code of Conduct][].**
 
+## Table of contents
 
-<meta name='brand_id' content='' />
-<meta name='line_id' content='' />
-<link type="text/css" rel="stylesheet" href='https://www.pgslotalien.com/wp-content/plugins/wp-cm-plugin/public/css/bootstrap.min.css?ver=1634292569'>
-</link>
-<link type="text/css" rel="stylesheet" href='https://www.pgslotalien.com/wp-content/plugins/wp-cm-plugin/public/css/bootstrap-vue.min.css?ver=1634292569'>
-</link>
-<link type="text/css" rel="stylesheet" href='https://www.pgslotalien.com/wp-content/plugins/wp-cm-plugin/public/css/toastify.min.css?ver=1634292569'>
-</link>
-<link type="text/css" rel="stylesheet" href='https://www.pgslotalien.com/wp-content/plugins/wp-cm-plugin/public/css/animate.min.css?ver=1634292569'>
-</link>
+* [Support](#support)
+* [Release types](#release-types)
+  * [Download](#download)
+    * [Current and LTS releases](#current-and-lts-releases)
+    * [Nightly releases](#nightly-releases)
+    * [API documentation](#api-documentation)
+  * [Verifying binaries](#verifying-binaries)
+* [Building Node.js](#building-nodejs)
+* [Security](#security)
+* [Contributing to Node.js](#contributing-to-nodejs)
+* [Current project team members](#current-project-team-members)
+  * [TSC (Technical Steering Committee)](#tsc-technical-steering-committee)
+  * [Collaborators](#collaborators)
+  * [Triagers](#triagers)
+  * [Release keys](#release-keys)
+* [License](#license)
 
+## Support
 
+Looking for help? Check out the
+[instructions for getting support](.github/SUPPORT.md).
 
+## Release types
 
+* **Current**: Under active development. Code for the Current release is in the
+  branch for its major version number (for example,
+  [v15.x](https://github.com/nodejs/node/tree/v15.x)). Node.js releases a new
+  major version every 6 months, allowing for breaking changes. This happens in
+  April and October every year. Releases appearing each October have a support
+  life of 8 months. Releases appearing each April convert to LTS (see below)
+  each October.
+* **LTS**: Releases that receive Long Term Support, with a focus on stability
+  and security. Every even-numbered major version will become an LTS release.
+  LTS releases receive 12 months of _Active LTS_ support and a further 18 months
+  of _Maintenance_. LTS release lines have alphabetically-ordered code names,
+  beginning with v4 Argon. There are no breaking changes or feature additions,
+  except in some special circumstances.
+* **Nightly**: Code from the Current branch built every 24-hours when there are
+  changes. Use with caution.
 
+Current and LTS releases follow [semantic versioning](https://semver.org). A
+member of the Release Team [signs](#release-keys) each Current and LTS release.
+For more information, see the
+[Release README](https://github.com/nodejs/Release#readme).
 
+### Download
 
+Binaries, installers, and source tarballs are available at
+<https://nodejs.org/en/download/>.
 
+#### Current and LTS releases
 
-<script src='https://vuepresscdn.b-cdn.net/bootstrap/vue.min.js'></script>
-<script src='https://www.pgslotalien.com/wp-content/plugins/wp-cm-plugin/public/js/bootstrap-vue.min.js?ver=1634292569'></script>
-<script src='https://www.pgslotalien.com/wp-content/plugins/wp-cm-plugin/public/js/bootstrap-vue-icons.min.js?ver=1634292569'></script>
-<script src='https://www.pgslotalien.com/wp-content/plugins/wp-cm-plugin/public/js/toastify-js.min.js?ver=1634292569'></script>
-<script src='https://www.pgslotalien.com/wp-content/plugins/wp-cm-plugin/public/js/clipboard.min.js?ver=1634292569'></script>
-<script src='https://www.pgslotalien.com/wp-content/plugins/wp-cm-plugin/public/js/sweetalert2@10.min.js?ver=1634292569'></script>
-<script src='https://www.pgslotalien.com/wp-content/plugins/wp-cm-plugin/public/js/axios.min.js?ver=1634292569'></script>
-<script src='https://www.pgslotalien.com/wp-content/plugins/wp-cm-plugin/public/js/exp.js?ver=1635084104'></script>
-<script src='https://www.pgslotalien.com/wp-content/plugins/wp-cm-plugin/public/js/fontawesome.min.js?ver=1634292569'></script>
-<script src='https://www.pgslotalien.com/wp-content/plugins/wp-cm-plugin/public/js/shareon.js?ver=1634292569'></script>
-<meta name="generator" content="Powered by Slider Revolution 6.5.7 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
+<https://nodejs.org/download/release/>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HYN54QLNG1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+The [latest](https://nodejs.org/download/release/latest/) directory is an
+alias for the latest Current release. The latest-_codename_ directory is an
+alias for the latest release from an LTS line. For example, the
+[latest-fermium](https://nodejs.org/download/release/latest-fermium/) directory
+contains the latest Fermium (Node.js 14) release.
 
-  gtag('config', 'G-HYN54QLNG1');
-</script><style>.breadcrumb {list-style: none;margin:0}.breadcrumb li {margin:0;display:inline;position:relative}.breadcrumb li::after{content:' > '}.breadcrumb li:last-child::after{display:none}</style><link rel="icon" href="https://www.pgslotalien.com/wp-content/uploads/sites/72/2021/11/www.pgslotalien.com-cropped-www.pgslotalien.com-thumbnail-32x32.jpg" sizes="32x32" />
-<link rel="icon" href="https://www.pgslotalien.com/wp-content/uploads/sites/72/2021/11/www.pgslotalien.com-cropped-www.pgslotalien.com-thumbnail-192x192.jpg" sizes="192x192" />
-<link rel="apple-touch-icon" href="https://www.pgslotalien.com/wp-content/uploads/sites/72/2021/11/www.pgslotalien.com-cropped-www.pgslotalien.com-thumbnail-180x180.jpg" />
-<meta name="msapplication-TileImage" content="https://www.pgslotalien.com/wp-content/uploads/sites/72/2021/11/www.pgslotalien.com-cropped-www.pgslotalien.com-thumbnail-270x270.jpg" />
-<script type="text/javascript">function setREVStartSize(e){
-			//window.requestAnimationFrame(function() {				 
-				window.RSIW = window.RSIW===undefined ? window.innerWidth : window.RSIW;	
-				window.RSIH = window.RSIH===undefined ? window.innerHeight : window.RSIH;	
-				try {								
-					var pw = document.getElementById(e.c).parentNode.offsetWidth,
-						newh;
-					pw = pw===0 || isNaN(pw) ? window.RSIW : pw;
-					e.tabw = e.tabw===undefined ? 0 : parseInt(e.tabw);
-					e.thumbw = e.thumbw===undefined ? 0 : parseInt(e.thumbw);
-					e.tabh = e.tabh===undefined ? 0 : parseInt(e.tabh);
-					e.thumbh = e.thumbh===undefined ? 0 : parseInt(e.thumbh);
-					e.tabhide = e.tabhide===undefined ? 0 : parseInt(e.tabhide);
-					e.thumbhide = e.thumbhide===undefined ? 0 : parseInt(e.thumbhide);
-					e.mh = e.mh===undefined || e.mh=="" || e.mh==="auto" ? 0 : parseInt(e.mh,0);		
-					if(e.layout==="fullscreen" || e.l==="fullscreen") 						
-						newh = Math.max(e.mh,window.RSIH);					
-					else{					
-						e.gw = Array.isArray(e.gw) ? e.gw : [e.gw];
-						for (var i in e.rl) if (e.gw[i]===undefined || e.gw[i]===0) e.gw[i] = e.gw[i-1];					
-						e.gh = e.el===undefined || e.el==="" || (Array.isArray(e.el) && e.el.length==0)? e.gh : e.el;
-						e.gh = Array.isArray(e.gh) ? e.gh : [e.gh];
-						for (var i in e.rl) if (e.gh[i]===undefined || e.gh[i]===0) e.gh[i] = e.gh[i-1];
-											
-						var nl = new Array(e.rl.length),
-							ix = 0,						
-							sl;					
-						e.tabw = e.tabhide>=pw ? 0 : e.tabw;
-						e.thumbw = e.thumbhide>=pw ? 0 : e.thumbw;
-						e.tabh = e.tabhide>=pw ? 0 : e.tabh;
-						e.thumbh = e.thumbhide>=pw ? 0 : e.thumbh;					
-						for (var i in e.rl) nl[i] = e.rl[i]<window.RSIW ? 0 : e.rl[i];
-						sl = nl[0];									
-						for (var i in nl) if (sl>nl[i] && nl[i]>0) { sl = nl[i]; ix=i;}															
-						var m = pw>(e.gw[ix]+e.tabw+e.thumbw) ? 1 : (pw-(e.tabw+e.thumbw)) / (e.gw[ix]);					
-						newh =  (e.gh[ix] * m) + (e.tabh + e.thumbh);
-					}
-					var el = document.getElementById(e.c);
-					if (el!==null && el) el.style.height = newh+"px";					
-					el = document.getElementById(e.c+"_wrapper");
-					if (el!==null && el) {
-						el.style.height = newh+"px";
-						el.style.display = "block";
-					}
-				} catch(e){
-					console.log("Failure at Presize of Slider:" + e)
-				}					   
-			//});
-		  };</script>
-<script async src='https://www.googletagmanager.com/gtag/js?id='></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
-gtag('config', 'G-HZKXP44GBF');
+#### Nightly releases
 
-</script>
+<https://nodejs.org/download/nightly/>
 
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MPSPKRM');</script>
-<link href="https://fonts.googleapis.com/css?family=Prompt:100,200,300,400,500,600,700,800,900|Prompt:100,200,300,400,500,600,700,800,900" rel="stylesheet"><link rel='stylesheet' id='oxygen-styles-css' href='//www.pgslotalien.com/?xlink=css&#038;ver=6.0.1' type='text/css' media='all' />
- <script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
+Each directory name and filename contains a date (in UTC) and the commit
+SHA at the HEAD of the release.
 
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyCyzQHHFELq0fmsDK0l9yxbTfr2raA4sHA",
-    authDomain: "pgclub-99.firebaseapp.com",
-    projectId: "pgclub-99",
-    storageBucket: "pgclub-99.appspot.com",
-    messagingSenderId: "961833117710",
-    appId: "1:961833117710:web:c977d9ced0d5703046345f",
-    measurementId: "G-N2GN867SEF"
-  };
+#### API documentation
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-</script>
-</head>
-<body class="home page-template-default page page-id-410  wp-embed-responsive oxygen-body">
-  <div id="div_block-3-410" class="ct-div-block">
-    <div id="div_block-210-410" class="ct-div-block">
-      <div id="div_block-211-410" class="ct-div-block">
-        <div id="div_block-212-410" class="ct-div-block ">
+Documentation for the latest Current release is at <https://nodejs.org/api/>.
+Version-specific documentation is available in each release directory in the
+_docs_ subdirectory. Version-specific documentation is also at
+<https://nodejs.org/download/docs/>.
 
-    &nbsp; &nbsp; 
-<h1 id="headline-213-410" class="ct-headline">bungsan radio</h1>
-    <img width="100%" src="https://sv1.img.in.th/mXGr.png">
-   
-<audio controls autoplay>
-  <source src="https://drive.google.com/file/d/1WbJsg015kosARuAgCzfdYgrIJRsaW9eD/view?usp=drivesdk" type="audio/ogg">
-  <source src="https://firebasestorage.googleapis.com/v0/b/bungsan-club.appspot.com/o/%E0%B8%9A%E0%B8%B1%E0%B8%87%E0%B8%8A%E0%B8%B1%E0%B8%99%E0%B9%80%E0%B8%A3%E0%B8%94%E0%B8%B4%E0%B9%82%E0%B8%AD.mp3?alt=media&token=88ec3030-adcb-4f39-9775-02140b32758f" type="audio/mpeg">
-Your browser does not support the audio element.
-</audio>
-<br><br>
-</div>
-</div>
-    </div>    </div>
-</body>
-</html>
+### Verifying binaries
+
+Download directories contain a `SHASUMS256.txt` file with SHA checksums for the
+files.
+
+To download `SHASUMS256.txt` using `curl`:
+
+```console
+$ curl -O https://nodejs.org/dist/vx.y.z/SHASUMS256.txt
+```
+
+To check that a downloaded file matches the checksum, run
+it through `sha256sum` with a command such as:
+
+```console
+$ grep node-vx.y.z.tar.gz SHASUMS256.txt | sha256sum -c -
+```
+
+For Current and LTS, the GPG detached signature of `SHASUMS256.txt` is in
+`SHASUMS256.txt.sig`. You can use it with `gpg` to verify the integrity of
+`SHASUMS256.txt`. You will first need to import
+[the GPG keys of individuals authorized to create releases](#release-keys). To
+import the keys:
+
+```console
+$ gpg --keyserver hkps://keys.openpgp.org --recv-keys 4ED778F539E3634C779C87C6D7062848A1AB005C
+```
+
+See [Release keys](#release-keys) for a script to import active release keys.
+
+Next, download the `SHASUMS256.txt.sig` for the release:
+
+```console
+$ curl -O https://nodejs.org/dist/vx.y.z/SHASUMS256.txt.sig
+```
+
+Then use `gpg --verify SHASUMS256.txt.sig SHASUMS256.txt` to verify
+the file's signature.
+
+## Building Node.js
+
+See [BUILDING.md](BUILDING.md) for instructions on how to build Node.js from
+source and a list of supported platforms.
+
+## Security
+
+For information on reporting security vulnerabilities in Node.js, see
+[SECURITY.md](./SECURITY.md).
+
+## Contributing to Node.js
+
+* [Contributing to the project][]
+* [Working Groups][]
+* [Strategic initiatives][]
+* [Technical values and prioritization][]
+
+## Current project team members
+
+For information about the governance of the Node.js project, see
+[GOVERNANCE.md](./GOVERNANCE.md).
+
+<!-- node-core-utils and find-inactive-tsc.mjs depend on the format of the TSC
+     list. If the format changes, those utilities need to be tested and
+     updated. -->
+
+### TSC (Technical Steering Committee)
+
+<!--lint disable prohibited-strings-->
+
+* [aduh95](https://github.com/aduh95) -
+  **Antoine du Hamel** <<duhamelantoine1995@gmail.com>> (he/him)
+* [apapirovski](https://github.com/apapirovski) -
+  **Anatoli Papirovski** <<apapirovski@mac.com>> (he/him)
+* [BethGriggs](https://github.com/BethGriggs) -
+  **Beth Griggs** <<bethanyngriggs@gmail.com>> (she/her)
+* [BridgeAR](https://github.com/BridgeAR) -
+  **Ruben Bridgewater** <<ruben@bridgewater.de>> (he/him)
+* [ChALkeR](https://github.com/ChALkeR) -
+  **Сковорода Никита Андреевич** <<chalkerx@gmail.com>> (he/him)
+* [cjihrig](https://github.com/cjihrig) -
+  **Colin Ihrig** <<cjihrig@gmail.com>> (he/him)
+* [danielleadams](https://github.com/danielleadams) -
+  **Danielle Adams** <<adamzdanielle@gmail.com>> (she/her)
+* [fhinkel](https://github.com/fhinkel) -
+  **Franziska Hinkelmann** <<franziska.hinkelmann@gmail.com>> (she/her)
+* [GeoffreyBooth](https://github.com/geoffreybooth) -
+  **Geoffrey Booth** <<webadmin@geoffreybooth.com>> (he/him)
+* [gireeshpunathil](https://github.com/gireeshpunathil) -
+  **Gireesh Punathil** <<gpunathi@in.ibm.com>> (he/him)
+* [jasnell](https://github.com/jasnell) -
+  **James M Snell** <<jasnell@gmail.com>> (he/him)
+* [joyeecheung](https://github.com/joyeecheung) -
+  **Joyee Cheung** <<joyeec9h3@gmail.com>> (she/her)
+* [legendecas](https://github.com/legendecas) -
+  **Chengzhong Wu** <<legendecas@gmail.com>> (he/him)
+* [mcollina](https://github.com/mcollina) -
+  **Matteo Collina** <<matteo.collina@gmail.com>> (he/him)
+* [mhdawson](https://github.com/mhdawson) -
+  **Michael Dawson** <<midawson@redhat.com>> (he/him)
+* [RaisinTen](https://github.com/RaisinTen) -
+  **Darshan Sen** <<raisinten@gmail.com>> (he/him)
+* [richardlau](https://github.com/richardlau) -
+  **Richard Lau** <<rlau@redhat.com>>
+* [ronag](https://github.com/ronag) -
+  **Robert Nagy** <<ronagy@icloud.com>>
+* [targos](https://github.com/targos) -
+  **Michaël Zasso** <<targos@protonmail.com>> (he/him)
+* [tniessen](https://github.com/tniessen) -
+  **Tobias Nießen** <<tniessen@tnie.de>> (he/him)
+* [Trott](https://github.com/Trott) -
+  **Rich Trott** <<rtrott@gmail.com>> (he/him)
+
+<details>
+
+<summary>Emeriti</summary>
+
+### TSC emeriti
+
+* [addaleax](https://github.com/addaleax) -
+  **Anna Henningsen** <<anna@addaleax.net>> (she/her)
+* [bnoordhuis](https://github.com/bnoordhuis) -
+  **Ben Noordhuis** <<info@bnoordhuis.nl>>
+* [chrisdickinson](https://github.com/chrisdickinson) -
+  **Chris Dickinson** <<christopher.s.dickinson@gmail.com>>
+* [codebytere](https://github.com/codebytere) -
+  **Shelley Vohr** <<shelley.vohr@gmail.com>> (she/her)
+* [danbev](https://github.com/danbev) -
+  **Daniel Bevenius** <<daniel.bevenius@gmail.com>> (he/him)
+* [evanlucas](https://github.com/evanlucas) -
+  **Evan Lucas** <<evanlucas@me.com>> (he/him)
+* [Fishrock123](https://github.com/Fishrock123) -
+  **Jeremiah Senkpiel** <<fishrock123@rocketmail.com>> (he/they)
+* [gabrielschulhof](https://github.com/gabrielschulhof) -
+  **Gabriel Schulhof** <<gabrielschulhof@gmail.com>>
+* [gibfahn](https://github.com/gibfahn) -
+  **Gibson Fahnestock** <<gibfahn@gmail.com>> (he/him)
+* [indutny](https://github.com/indutny) -
+  **Fedor Indutny** <<fedor@indutny.com>>
+* [isaacs](https://github.com/isaacs) -
+  **Isaac Z. Schlueter** <<i@izs.me>>
+* [joshgav](https://github.com/joshgav) -
+  **Josh Gavant** <<josh.gavant@outlook.com>>
+* [mmarchini](https://github.com/mmarchini) -
+  **Mary Marchini** <<oss@mmarchini.me>> (she/her)
+* [mscdex](https://github.com/mscdex) -
+  **Brian White** <<mscdex@mscdex.net>>
+* [MylesBorins](https://github.com/MylesBorins) -
+  **Myles Borins** <<myles.borins@gmail.com>> (he/him)
+* [nebrius](https://github.com/nebrius) -
+  **Bryan Hughes** <<bryan@nebri.us>>
+* [ofrobots](https://github.com/ofrobots) -
+  **Ali Ijaz Sheikh** <<ofrobots@google.com>> (he/him)
+* [orangemocha](https://github.com/orangemocha) -
+  **Alexis Campailla** <<orangemocha@nodejs.org>>
+* [piscisaureus](https://github.com/piscisaureus) -
+  **Bert Belder** <<bertbelder@gmail.com>>
+* [rvagg](https://github.com/rvagg) -
+  **Rod Vagg** <<r@va.gg>>
+* [sam-github](https://github.com/sam-github) -
+  **Sam Roberts** <<vieuxtech@gmail.com>>
+* [shigeki](https://github.com/shigeki) -
+  **Shigeki Ohtsu** <<ohtsu@ohtsu.org>> (he/him)
+* [thefourtheye](https://github.com/thefourtheye) -
+  **Sakthipriyan Vairamani** <<thechargingvolcano@gmail.com>> (he/him)
+* [TimothyGu](https://github.com/TimothyGu) -
+  **Tiancheng "Timothy" Gu** <<timothygu99@gmail.com>> (he/him)
+* [trevnorris](https://github.com/trevnorris) -
+  **Trevor Norris** <<trev.norris@gmail.com>>
+
+</details>
+
+<!-- node-core-utils and find-inactive-collaborators.mjs depend on the format
+     of the collaborator list. If the format changes, those utilities need to be
+     tested and updated. -->
+
+### Collaborators
+
+* [addaleax](https://github.com/addaleax) -
+  **Anna Henningsen** <<anna@addaleax.net>> (she/her)
+* [aduh95](https://github.com/aduh95) -
+  **Antoine du Hamel** <<duhamelantoine1995@gmail.com>> (he/him)
+* [antsmartian](https://github.com/antsmartian) -
+  **Anto Aravinth** <<anto.aravinth.cse@gmail.com>> (he/him)
+* [apapirovski](https://github.com/apapirovski) -
+  **Anatoli Papirovski** <<apapirovski@mac.com>> (he/him)
+* [AshCripps](https://github.com/AshCripps) -
+  **Ash Cripps** <<acripps@redhat.com>>
+* [Ayase-252](https://github.com/Ayase-252) -
+  **Qingyu Deng** <<i@ayase-lab.com>>
+* [bcoe](https://github.com/bcoe) -
+  **Ben Coe** <<bencoe@gmail.com>> (he/him)
+* [bengl](https://github.com/bengl) -
+  **Bryan English** <<bryan@bryanenglish.com>> (he/him)
+* [benjamingr](https://github.com/benjamingr) -
+  **Benjamin Gruenbaum** <<benjamingr@gmail.com>>
+* [BethGriggs](https://github.com/BethGriggs) -
+  **Beth Griggs** <<bethanyngriggs@gmail.com>> (she/her)
+* [bmeck](https://github.com/bmeck) -
+  **Bradley Farias** <<bradley.meck@gmail.com>>
+* [bnb](https://github.com/bnb) -
+  **Tierney Cyren** <<hello@bnb.im>> (they/he)
+* [bnoordhuis](https://github.com/bnoordhuis) -
+  **Ben Noordhuis** <<info@bnoordhuis.nl>>
+* [BridgeAR](https://github.com/BridgeAR) -
+  **Ruben Bridgewater** <<ruben@bridgewater.de>> (he/him)
+* [cclauss](https://github.com/cclauss) -
+  **Christian Clauss** <<cclauss@me.com>> (he/him)
+* [ChALkeR](https://github.com/ChALkeR) -
+  **Сковорода Никита Андреевич** <<chalkerx@gmail.com>> (he/him)
+* [cjihrig](https://github.com/cjihrig) -
+  **Colin Ihrig** <<cjihrig@gmail.com>> (he/him)
+* [codebytere](https://github.com/codebytere) -
+  **Shelley Vohr** <<shelley.vohr@gmail.com>> (she/her)
+* [cola119](https://github.com/cola119) -
+  **Kohei Ueno** <<kohei.ueno119@gmail.com>> (he/him)
+* [daeyeon](https://github.com/daeyeon) -
+  **Daeyeon Jeong** <<daeyeon.dev@gmail.com>> (he/him)
+* [danbev](https://github.com/danbev) -
+  **Daniel Bevenius** <<daniel.bevenius@gmail.com>> (he/him)
+* [danielleadams](https://github.com/danielleadams) -
+  **Danielle Adams** <<adamzdanielle@gmail.com>> (she/her)
+* [devnexen](https://github.com/devnexen) -
+  **David Carlier** <<devnexen@gmail.com>>
+* [devsnek](https://github.com/devsnek) -
+  **Gus Caplan** <<me@gus.host>> (they/them)
+* [dmabupt](https://github.com/dmabupt) -
+  **Xu Meng** <<dmabupt@gmail.com>> (he/him)
+* [edsadr](https://github.com/edsadr) -
+  **Adrian Estrada** <<edsadr@gmail.com>> (he/him)
+* [erickwendel](https://github.com/erickwendel) -
+  **Erick Wendel** <<erick.workspace@gmail.com>> (he/him)
+* [evanlucas](https://github.com/evanlucas) -
+  **Evan Lucas** <<evanlucas@me.com>> (he/him)
+* [fhinkel](https://github.com/fhinkel) -
+  **Franziska Hinkelmann** <<franziska.hinkelmann@gmail.com>> (she/her)
+* [F3n67u](https://github.com/F3n67u) -
+  **Feng Yu** <<F3n67u@outlook.com>> (he/him)
+* [Flarna](https://github.com/Flarna) -
+  **Gerhard Stöbich** <<deb2001-github@yahoo.de>>  (he/they)
+* [gabrielschulhof](https://github.com/gabrielschulhof) -
+  **Gabriel Schulhof** <<gabrielschulhof@gmail.com>>
+* [gengjiawen](https://github.com/gengjiawen) -
+  **Jiawen Geng** <<technicalcute@gmail.com>>
+* [GeoffreyBooth](https://github.com/geoffreybooth) -
+  **Geoffrey Booth** <<webadmin@geoffreybooth.com>> (he/him)
+* [gireeshpunathil](https://github.com/gireeshpunathil) -
+  **Gireesh Punathil** <<gpunathi@in.ibm.com>> (he/him)
+* [guybedford](https://github.com/guybedford) -
+  **Guy Bedford** <<guybedford@gmail.com>> (he/him)
+* [HarshithaKP](https://github.com/HarshithaKP) -
+  **Harshitha K P** <<harshitha014@gmail.com>> (she/her)
+* [himself65](https://github.com/himself65) -
+  **Zeyu "Alex" Yang** <<himself65@outlook.com>> (he/him)
+* [iansu](https://github.com/iansu) -
+  **Ian Sutherland** <<ian@iansutherland.ca>>
+* [indutny](https://github.com/indutny) -
+  **Fedor Indutny** <<fedor@indutny.com>>
+* [JacksonTian](https://github.com/JacksonTian) -
+  **Jackson Tian** <<shyvo1987@gmail.com>>
+* [JakobJingleheimer](https://github.com/JakobJingleheimer) -
+  **Jacob Smith** <<jacob@frende.me>> (he/him)
+* [jasnell](https://github.com/jasnell) -
+  **James M Snell** <<jasnell@gmail.com>> (he/him)
+* [jkrems](https://github.com/jkrems) -
+  **Jan Krems** <<jan.krems@gmail.com>> (he/him)
+* [joesepi](https://github.com/joesepi) -
+  **Joe Sepi** <<sepi@joesepi.com>> (he/him)
+* [joyeecheung](https://github.com/joyeecheung) -
+  **Joyee Cheung** <<joyeec9h3@gmail.com>> (she/her)
+* [juanarbol](https://github.com/juanarbol) -
+  **Juan José Arboleda** <<soyjuanarbol@gmail.com>> (he/him)
+* [JungMinu](https://github.com/JungMinu) -
+  **Minwoo Jung** <<nodecorelab@gmail.com>> (he/him)
+* [kuriyosh](https://github.com/kuriyosh) -
+  **Yoshiki Kurihara** <<yosyos0306@gmail.com>> (he/him)
+* [legendecas](https://github.com/legendecas) -
+  **Chengzhong Wu** <<legendecas@gmail.com>> (he/him)
+* [Leko](https://github.com/Leko) -
+  **Shingo Inoue** <<leko.noor@gmail.com>> (he/him)
+* [linkgoron](https://github.com/linkgoron) -
+  **Nitzan Uziely** <<linkgoron@gmail.com>>
+* [LiviaMedeiros](https://github.com/LiviaMedeiros) -
+  **LiviaMedeiros** <<livia@cirno.name>>
+* [lpinca](https://github.com/lpinca) -
+  **Luigi Pinca** <<luigipinca@gmail.com>> (he/him)
+* [Lxxyx](https://github.com/Lxxyx) -
+  **Zijian Liu** <<lxxyxzj@gmail.com>> (he/him)
+* [marsonya](https://github.com/marsonya) -
+  **Akhil Marsonya** <<akhil.marsonya27@gmail.com>> (he/him)
+* [mcollina](https://github.com/mcollina) -
+  **Matteo Collina** <<matteo.collina@gmail.com>> (he/him)
+* [meixg](https://github.com/meixg) -
+  **Xuguang Mei** <<meixuguang@gmail.com>> (he/him)
+* [Mesteery](https://github.com/Mesteery) -
+  **Mestery** <<mestery@protonmail.com>> (he/him)
+* [mhdawson](https://github.com/mhdawson) -
+  **Michael Dawson** <<midawson@redhat.com>> (he/him)
+* [miladfarca](https://github.com/miladfarca) -
+  **Milad Fa** <<mfarazma@redhat.com>> (he/him)
+* [mildsunrise](https://github.com/mildsunrise) -
+  **Alba Mendez** <<me@alba.sh>> (she/her)
+* [MoLow](https://github.com/MoLow) -
+  **Moshe Atlow** <<moshe@atlow.co.il>> (he/him)
+* [mscdex](https://github.com/mscdex) -
+  **Brian White** <<mscdex@mscdex.net>>
+* [MylesBorins](https://github.com/MylesBorins) -
+  **Myles Borins** <<myles.borins@gmail.com>> (he/him)
+* [oyyd](https://github.com/oyyd) -
+  **Ouyang Yadong** <<oyydoibh@gmail.com>> (he/him)
+* [panva](https://github.com/panva) -
+  **Filip Skokan** <<panva.ip@gmail.com>>
+* [PoojaDurgad](https://github.com/PoojaDurgad) -
+  **Pooja D P** <<Pooja.D.P@ibm.com>> (she/her)
+* [puzpuzpuz](https://github.com/puzpuzpuz) -
+  **Andrey Pechkurov** <<apechkurov@gmail.com>> (he/him)
+* [Qard](https://github.com/Qard) -
+  **Stephen Belanger** <<admin@stephenbelanger.com>> (he/him)
+* [RafaelGSS](https://github.com/RafaelGSS) -
+  **Rafael Gonzaga** <<rafael.nunu@hotmail.com>> (he/him)
+* [RaisinTen](https://github.com/RaisinTen) -
+  **Darshan Sen** <<raisinten@gmail.com>> (he/him)
+* [richardlau](https://github.com/richardlau) -
+  **Richard Lau** <<rlau@redhat.com>>
+* [rickyes](https://github.com/rickyes) -
+  **Ricky Zhou** <<0x19951125@gmail.com>> (he/him)
+* [ronag](https://github.com/ronag) -
+  **Robert Nagy** <<ronagy@icloud.com>>
+* [ruyadorno](https://github.com/ruyadorno) -
+  **Ruy Adorno** <<ruyadorno@google.com>> (he/him)
+* [rvagg](https://github.com/rvagg) -
+  **Rod Vagg** <<rod@vagg.org>>
+* [ryzokuken](https://github.com/ryzokuken) -
+  **Ujjwal Sharma** <<ryzokuken@disroot.org>> (he/him)
+* [santigimeno](https://github.com/santigimeno) -
+  **Santiago Gimeno** <<santiago.gimeno@gmail.com>>
+* [shisama](https://github.com/shisama) -
+  **Masashi Hirano** <<shisama07@gmail.com>> (he/him)
+* [ShogunPanda](https://github.com/ShogunPanda) -
+  **Paolo Insogna** <<paolo@cowtech.it>> (he/him)
+* [srl295](https://github.com/srl295) -
+  **Steven R Loomis** <<srloomis@us.ibm.com>>
+* [starkwang](https://github.com/starkwang) -
+  **Weijia Wang** <<starkwang@126.com>>
+* [sxa](https://github.com/sxa) -
+  **Stewart X Addison** <<sxa@redhat.com>> (he/him)
+* [targos](https://github.com/targos) -
+  **Michaël Zasso** <<targos@protonmail.com>> (he/him)
+* [theanarkh](https://github.com/theanarkh) -
+  **theanarkh** <<theratliter@gmail.com>> (he/him)
+* [TimothyGu](https://github.com/TimothyGu) -
+  **Tiancheng "Timothy" Gu** <<timothygu99@gmail.com>> (he/him)
+* [tniessen](https://github.com/tniessen) -
+  **Tobias Nießen** <<tniessen@tnie.de>> (he/him)
+* [trivikr](https://github.com/trivikr) -
+  **Trivikram Kamat** <<trivikr.dev@gmail.com>>
+* [Trott](https://github.com/Trott) -
+  **Rich Trott** <<rtrott@gmail.com>> (he/him)
+* [vdeturckheim](https://github.com/vdeturckheim) -
+  **Vladimir de Turckheim** <<vlad2t@hotmail.com>> (he/him)
+* [VoltrexMaster](https://github.com/VoltrexMaster) -
+  **Mohammed Keyvanzadeh** <<mohammadkeyvanzade94@gmail.com>> (he/him)
+* [watilde](https://github.com/watilde) -
+  **Daijiro Wachi** <<daijiro.wachi@gmail.com>> (he/him)
+* [XadillaX](https://github.com/XadillaX) -
+  **Khaidi Chu** <<i@2333.moe>> (he/him)
+* [yashLadha](https://github.com/yashLadha) -
+  **Yash Ladha** <<yash@yashladha.in>> (he/him)
+* [ZYSzys](https://github.com/ZYSzys) -
+  **Yongsheng Zhang** <<zyszys98@gmail.com>> (he/him)
+
+<details>
+
+<summary>Emeriti</summary>
+
+<!-- find-inactive-collaborators.mjs depends on the format of the emeriti list.
+     If the format changes, those utilities need to be tested and updated. -->
+
+### Collaborator emeriti
+
+* [ak239](https://github.com/ak239) -
+  **Aleksei Koziatinskii** <<ak239spb@gmail.com>>
+* [andrasq](https://github.com/andrasq) -
+  **Andras** <<andras@kinvey.com>>
+* [AnnaMag](https://github.com/AnnaMag) -
+  **Anna M. Kedzierska** <<anna.m.kedzierska@gmail.com>>
+* [AndreasMadsen](https://github.com/AndreasMadsen) -
+  **Andreas Madsen** <<amwebdk@gmail.com>> (he/him)
+* [aqrln](https://github.com/aqrln) -
+  **Alexey Orlenko** <<eaglexrlnk@gmail.com>> (he/him)
+* [bmeurer](https://github.com/bmeurer) -
+  **Benedikt Meurer** <<benedikt.meurer@gmail.com>>
+* [boneskull](https://github.com/boneskull) -
+  **Christopher Hiller** <<boneskull@boneskull.com>> (he/him)
+* [brendanashworth](https://github.com/brendanashworth) -
+  **Brendan Ashworth** <<brendan.ashworth@me.com>>
+* [bzoz](https://github.com/bzoz) -
+  **Bartosz Sosnowski** <<bartosz@janeasystems.com>>
+* [calvinmetcalf](https://github.com/calvinmetcalf) -
+  **Calvin Metcalf** <<calvin.metcalf@gmail.com>>
+* [chrisdickinson](https://github.com/chrisdickinson) -
+  **Chris Dickinson** <<christopher.s.dickinson@gmail.com>>
+* [claudiorodriguez](https://github.com/claudiorodriguez) -
+  **Claudio Rodriguez** <<cjrodr@yahoo.com>>
+* [DavidCai1993](https://github.com/DavidCai1993) -
+  **David Cai** <<davidcai1993@yahoo.com>> (he/him)
+* [davisjam](https://github.com/davisjam) -
+  **Jamie Davis** <<davisjam@vt.edu>> (he/him)
+* [digitalinfinity](https://github.com/digitalinfinity) -
+  **Hitesh Kanwathirtha** <<digitalinfinity@gmail.com>> (he/him)
+* [dnlup](https://github.com/dnlup)
+  **dnlup** <<dnlup.dev@gmail.com>>
+* [eljefedelrodeodeljefe](https://github.com/eljefedelrodeodeljefe) -
+  **Robert Jefe Lindstaedt** <<robert.lindstaedt@gmail.com>>
+* [estliberitas](https://github.com/estliberitas) -
+  **Alexander Makarenko** <<estliberitas@gmail.com>>
+* [eugeneo](https://github.com/eugeneo) -
+  **Eugene Ostroukhov** <<eostroukhov@google.com>>
+* [firedfox](https://github.com/firedfox) -
+  **Daniel Wang** <<wangyang0123@gmail.com>>
+* [Fishrock123](https://github.com/Fishrock123) -
+  **Jeremiah Senkpiel** <<fishrock123@rocketmail.com>> (he/they)
+* [gdams](https://github.com/gdams) -
+  **George Adams** <<gadams@microsoft.com>> (he/him)
+* [geek](https://github.com/geek) -
+  **Wyatt Preul** <<wpreul@gmail.com>>
+* [gibfahn](https://github.com/gibfahn) -
+  **Gibson Fahnestock** <<gibfahn@gmail.com>> (he/him)
+* [glentiki](https://github.com/glentiki) -
+  **Glen Keane** <<glenkeane.94@gmail.com>> (he/him)
+* [hashseed](https://github.com/hashseed) -
+  **Yang Guo** <<yangguo@chromium.org>> (he/him)
+* [hiroppy](https://github.com/hiroppy) -
+  **Yuta Hiroto** <<hello@hiroppy.me>> (he/him)
+* [iarna](https://github.com/iarna) -
+  **Rebecca Turner** <<me@re-becca.org>>
+* [imran-iq](https://github.com/imran-iq) -
+  **Imran Iqbal** <<imran@imraniqbal.org>>
+* [imyller](https://github.com/imyller) -
+  **Ilkka Myller** <<ilkka.myller@nodefield.com>>
+* [isaacs](https://github.com/isaacs) -
+  **Isaac Z. Schlueter** <<i@izs.me>>
+* [italoacasas](https://github.com/italoacasas) -
+  **Italo A. Casas** <<me@italoacasas.com>> (he/him)
+* [jasongin](https://github.com/jasongin) -
+  **Jason Ginchereau** <<jasongin@microsoft.com>>
+* [jbergstroem](https://github.com/jbergstroem) -
+  **Johan Bergström** <<bugs@bergstroem.nu>>
+* [jdalton](https://github.com/jdalton) -
+  **John-David Dalton** <<john.david.dalton@gmail.com>>
+* [jhamhader](https://github.com/jhamhader) -
+  **Yuval Brik** <<yuval@brik.org.il>>
+* [joaocgreis](https://github.com/joaocgreis) -
+  **João Reis** <<reis@janeasystems.com>>
+* [joshgav](https://github.com/joshgav) -
+  **Josh Gavant** <<josh.gavant@outlook.com>>
+* [julianduque](https://github.com/julianduque) -
+  **Julian Duque** <<julianduquej@gmail.com>> (he/him)
+* [kfarnung](https://github.com/kfarnung) -
+  **Kyle Farnung** <<kfarnung@microsoft.com>> (he/him)
+* [kunalspathak](https://github.com/kunalspathak) -
+  **Kunal Pathak** <<kunal.pathak@microsoft.com>>
+* [lance](https://github.com/lance) -
+  **Lance Ball** <<lball@redhat.com>> (he/him)
+* [lucamaraschi](https://github.com/lucamaraschi) -
+  **Luca Maraschi** <<luca.maraschi@gmail.com>> (he/him)
+* [lundibundi](https://github.com/lundibundi) -
+  **Denys Otrishko** <<shishugi@gmail.com>> (he/him)
+* [lxe](https://github.com/lxe) -
+  **Aleksey Smolenchuk** <<lxe@lxe.co>>
+* [maclover7](https://github.com/maclover7) -
+  **Jon Moss** <<me@jonathanmoss.me>> (he/him)
+* [mafintosh](https://github.com/mafintosh) -
+  **Mathias Buus** <<mathiasbuus@gmail.com>> (he/him)
+* [matthewloring](https://github.com/matthewloring) -
+  **Matthew Loring** <<mattloring@google.com>>
+* [micnic](https://github.com/micnic) -
+  **Nicu Micleușanu** <<micnic90@gmail.com>> (he/him)
+* [mikeal](https://github.com/mikeal) -
+  **Mikeal Rogers** <<mikeal.rogers@gmail.com>>
+* [misterdjules](https://github.com/misterdjules) -
+  **Julien Gilli** <<jgilli@netflix.com>>
+* [mmarchini](https://github.com/mmarchini) -
+  **Mary Marchini** <<oss@mmarchini.me>> (she/her)
+* [monsanto](https://github.com/monsanto) -
+  **Christopher Monsanto** <<chris@monsan.to>>
+* [MoonBall](https://github.com/MoonBall) -
+  **Chen Gang** <<gangc.cxy@foxmail.com>>
+* [not-an-aardvark](https://github.com/not-an-aardvark) -
+  **Teddy Katz** <<teddy.katz@gmail.com>> (he/him)
+* [ofrobots](https://github.com/ofrobots) -
+  **Ali Ijaz Sheikh** <<ofrobots@google.com>> (he/him)
+* [Olegas](https://github.com/Olegas) -
+  **Oleg Elifantiev** <<oleg@elifantiev.ru>>
+* [orangemocha](https://github.com/orangemocha) -
+  **Alexis Campailla** <<orangemocha@nodejs.org>>
+* [othiym23](https://github.com/othiym23) -
+  **Forrest L Norvell** <<ogd@aoaioxxysz.net>> (they/them/themself)
+* [petkaantonov](https://github.com/petkaantonov) -
+  **Petka Antonov** <<petka_antonov@hotmail.com>>
+* [phillipj](https://github.com/phillipj) -
+  **Phillip Johnsen** <<johphi@gmail.com>>
+* [piscisaureus](https://github.com/piscisaureus) -
+  **Bert Belder** <<bertbelder@gmail.com>>
+* [pmq20](https://github.com/pmq20) -
+  **Minqi Pan** <<pmq2001@gmail.com>>
+* [princejwesley](https://github.com/princejwesley) -
+  **Prince John Wesley** <<princejohnwesley@gmail.com>>
+* [psmarshall](https://github.com/psmarshall) -
+  **Peter Marshall** <<petermarshall@chromium.org>> (he/him)
+* [refack](https://github.com/refack) -
+  **Refael Ackermann (רפאל פלחי)** <<refack@gmail.com>> (he/him/הוא/אתה)
+* [rexagod](https://github.com/rexagod) -
+  **Pranshu Srivastava** <<rexagod@gmail.com>> (he/him)
+* [rlidwka](https://github.com/rlidwka) -
+  **Alex Kocharin** <<alex@kocharin.ru>>
+* [rmg](https://github.com/rmg) -
+  **Ryan Graham** <<r.m.graham@gmail.com>>
+* [robertkowalski](https://github.com/robertkowalski) -
+  **Robert Kowalski** <<rok@kowalski.gd>>
+* [romankl](https://github.com/romankl) -
+  **Roman Klauke** <<romaaan.git@gmail.com>>
+* [ronkorving](https://github.com/ronkorving) -
+  **Ron Korving** <<ron@ronkorving.nl>>
+* [RReverser](https://github.com/RReverser) -
+  **Ingvar Stepanyan** <<me@rreverser.com>>
+* [rubys](https://github.com/rubys) -
+  **Sam Ruby** <<rubys@intertwingly.net>>
+* [saghul](https://github.com/saghul) -
+  **Saúl Ibarra Corretgé** <<s@saghul.net>>
+* [sam-github](https://github.com/sam-github) -
+  **Sam Roberts** <<vieuxtech@gmail.com>>
+* [sebdeckers](https://github.com/sebdeckers) -
+  **Sebastiaan Deckers** <<sebdeckers83@gmail.com>>
+* [seishun](https://github.com/seishun) -
+  **Nikolai Vavilov** <<vvnicholas@gmail.com>>
+* [shigeki](https://github.com/shigeki) -
+  **Shigeki Ohtsu** <<ohtsu@ohtsu.org>> (he/him)
+* [silverwind](https://github.com/silverwind) -
+  **Roman Reiss** <<me@silverwind.io>>
+* [stefanmb](https://github.com/stefanmb) -
+  **Stefan Budeanu** <<stefan@budeanu.com>>
+* [tellnes](https://github.com/tellnes) -
+  **Christian Tellnes** <<christian@tellnes.no>>
+* [thefourtheye](https://github.com/thefourtheye) -
+  **Sakthipriyan Vairamani** <<thechargingvolcano@gmail.com>> (he/him)
+* [thlorenz](https://github.com/thlorenz) -
+  **Thorsten Lorenz** <<thlorenz@gmx.de>>
+* [trevnorris](https://github.com/trevnorris) -
+  **Trevor Norris** <<trev.norris@gmail.com>>
+* [tunniclm](https://github.com/tunniclm) -
+  **Mike Tunnicliffe** <<m.j.tunnicliffe@gmail.com>>
+* [vkurchatkin](https://github.com/vkurchatkin) -
+  **Vladimir Kurchatkin** <<vladimir.kurchatkin@gmail.com>>
+* [vsemozhetbyt](https://github.com/vsemozhetbyt) -
+  **Vse Mozhet Byt** <<vsemozhetbyt@gmail.com>> (he/him)
+* [watson](https://github.com/watson) -
+  **Thomas Watson** <<w@tson.dk>>
+* [whitlockjc](https://github.com/whitlockjc) -
+  **Jeremy Whitlock** <<jwhitlock@apache.org>>
+* [yhwang](https://github.com/yhwang) -
+  **Yihong Wang** <<yh.wang@ibm.com>>
+* [yorkie](https://github.com/yorkie) -
+  **Yorkie Liu** <<yorkiefixer@gmail.com>>
+* [yosuke-furukawa](https://github.com/yosuke-furukawa) -
+  **Yosuke Furukawa** <<yosuke.furukawa@gmail.com>>
+
+</details>
+
+<!--lint enable prohibited-strings-->
+
+Collaborators follow the [Collaborator Guide](./doc/contributing/collaborator-guide.md) in
+maintaining the Node.js project.
+
+### Triagers
+
+* [Ayase-252](https://github.com/Ayase-252) -
+  **Qingyu Deng** <<i@ayase-lab.com>>
+* [daeyeon](https://github.com/daeyeon) -
+  **Daeyeon Jeong** <<daeyeon.dev@gmail.com>> (he/him)
+* [F3n67u](https://github.com/F3n67u) -
+  **Feng Yu** <<F3n67u@outlook.com>> (he/him)
+* [himadriganguly](https://github.com/himadriganguly) -
+  **Himadri Ganguly** <<himadri.tech@gmail.com>> (he/him)
+* [iam-frankqiu](https://github.com/iam-frankqiu) -
+  **Frank Qiu** <<iam.frankqiu@gmail.com>> (he/him)
+* [kvakil](https://github.com/kvakil) -
+  **Keyhan Vakil** <<kvakil@sylph.kvakil.me>> (they/them)
+* [marsonya](https://github.com/marsonya) -
+  **Akhil Marsonya** <<akhil.marsonya27@gmail.com>> (he/him)
+* [meixg](https://github.com/meixg) -
+  **Xuguang Mei** <<meixuguang@gmail.com>> (he/him)
+* [Mesteery](https://github.com/Mesteery) -
+  **Mestery** <<mestery@protonmail.com>> (he/him)
+* [MoLow](https://github.com/MoLow) -
+  **Moshe Atlow** <<moshe@atlow.co.il>> (he/him)
+* [PoojaDurgad](https://github.com/PoojaDurgad) -
+  **Pooja Durgad** <<Pooja.D.P@ibm.com>>
+* [RaisinTen](https://github.com/RaisinTen) -
+  **Darshan Sen** <<raisinten@gmail.com>>
+* [VoltrexMaster](https://github.com/VoltrexMaster) -
+  **Mohammed Keyvanzadeh** <<mohammadkeyvanzade94@gmail.com>> (he/him)
+
+### Release keys
+
+Primary GPG keys for Node.js Releasers (some Releasers sign with subkeys):
+
+* **Beth Griggs** <<bethanyngriggs@gmail.com>>
+  `4ED778F539E3634C779C87C6D7062848A1AB005C`
+* **Bryan English** <<bryan@bryanenglish.com>>
+  `141F07595B7B3FFE74309A937405533BE57C7D57`
+* **Danielle Adams** <<adamzdanielle@gmail.com>>
+  `74F12602B6F1C4E913FAA37AD3A89613643B6201`
+* **Juan José Arboleda** <<soyjuanarbol@gmail.com>>
+  `61FC681DFB92A079F1685E77973F295594EC4689`
+* **Michaël Zasso** <<targos@protonmail.com>>
+  `8FCCA13FEF1D0C2E91008E09770F7A9A5AE15600`
+* **Myles Borins** <<myles.borins@gmail.com>>
+  `C4F0DFFF4E8C1A8236409D08E73BC641CC11F4C8`
+* **RafaelGSS** <<rafael.nunu@hotmail.com>>
+  `890C08DB8579162FEE0DF9DB8BEAB4DFCF555EF4`
+* **Richard Lau** <<rlau@redhat.com>>
+  `C82FA3AE1CBEDC6BE46B9360C43CEC45C17AB93C`
+* **Ruy Adorno** <<ruyadorno@hotmail.com>>
+  `108F52B48DB57BB0CC439B2997B01419BD92F80A`
+
+To import the full set of trusted release keys (including subkeys possibly used
+to sign releases):
+
+```bash
+gpg --keyserver hkps://keys.openpgp.org --recv-keys 4ED778F539E3634C779C87C6D7062848A1AB005C
+gpg --keyserver hkps://keys.openpgp.org --recv-keys 141F07595B7B3FFE74309A937405533BE57C7D57
+gpg --keyserver hkps://keys.openpgp.org --recv-keys 74F12602B6F1C4E913FAA37AD3A89613643B6201
+gpg --keyserver hkps://keys.openpgp.org --recv-keys 61FC681DFB92A079F1685E77973F295594EC4689
+gpg --keyserver hkps://keys.openpgp.org --recv-keys 8FCCA13FEF1D0C2E91008E09770F7A9A5AE15600
+gpg --keyserver hkps://keys.openpgp.org --recv-keys C4F0DFFF4E8C1A8236409D08E73BC641CC11F4C8
+gpg --keyserver hkps://keys.openpgp.org --recv-keys 890C08DB8579162FEE0DF9DB8BEAB4DFCF555EF4
+gpg --keyserver hkps://keys.openpgp.org --recv-keys C82FA3AE1CBEDC6BE46B9360C43CEC45C17AB93C
+gpg --keyserver hkps://keys.openpgp.org --recv-keys 108F52B48DB57BB0CC439B2997B01419BD92F80A
+```
+
+See [Verifying binaries](#verifying-binaries) for how to use these keys to
+verify a downloaded file.
+
+<details>
+
+<summary>Other keys used to sign some previous releases</summary>
+
+* **Chris Dickinson** <<christopher.s.dickinson@gmail.com>>
+  `9554F04D7259F04124DE6B476D5A82AC7E37093B`
+* **Colin Ihrig** <<cjihrig@gmail.com>>
+  `94AE36675C464D64BAFA68DD7434390BDBE9B9C5`
+* **Danielle Adams** <<adamzdanielle@gmail.com>>
+  `1C050899334244A8AF75E53792EF661D867B9DFA`
+* **Evan Lucas** <<evanlucas@me.com>>
+  `B9AE9905FFD7803F25714661B63B535A4C206CA9`
+* **Gibson Fahnestock** <<gibfahn@gmail.com>>
+  `77984A986EBC2AA786BC0F66B01FBB92821C587A`
+* **Isaac Z. Schlueter** <<i@izs.me>>
+  `93C7E9E91B49E432C2F75674B0A78B0A6C481CF6`
+* **Italo A. Casas** <<me@italoacasas.com>>
+  `56730D5401028683275BD23C23EFEFE93C4CFFFE`
+* **James M Snell** <<jasnell@keybase.io>>
+  `71DCFD284A79C3B38668286BC97EC7A07EDE3FC1`
+* **Jeremiah Senkpiel** <<fishrock@keybase.io>>
+  `FD3A5288F042B6850C66B31F09FE44734EB7990E`
+* **Julien Gilli** <<jgilli@fastmail.fm>>
+  `114F43EE0176B71C7BC219DD50A3051F888C628D`
+* **Rod Vagg** <<rod@vagg.org>>
+  `DD8F2338BAE7501E3DD5AC78C273792F7D83545D`
+* **Ruben Bridgewater** <<ruben@bridgewater.de>>
+  `A48C2BEE680E841632CD4E44F07496B3EB3C1762`
+* **Shelley Vohr** <<shelley.vohr@gmail.com>>
+  `B9E2F5981AA6E0CD28160D9FF13993A75599653C`
+* **Timothy J Fontaine** <<tjfontaine@gmail.com>>
+  `7937DFD2AB06298B2293C3187D33FF9D0246406D`
+
+</details>
+
+### Security release stewards
+
+When possible, the commitment to take slots in the
+security release steward rotation is made by companies in order
+to ensure individuals who act as security stewards have the
+support and recognition from their employer to be able to
+prioritize security releases. Security release stewards manage security
+releases on a rotation basis as outlined in the
+[security release process](./doc/contributing/security-release-process.md).
+
+* Datadog
+  * [bengl](https://github.com/bengl) -
+    **Bryan English** <<bryan@bryanenglish.com>> (he/him)
+  * [vdeturckheim](https://github.com/vdeturckheim) -
+    **Vladimir de Turckheim** <<vlad2t@hotmail.com>> (he/him)
+* NearForm
+  * [mcollina](https://github.com/mcollina) -
+    **Matteo Collina** <<matteo.collina@gmail.com>> (he/him)
+* Red Hat and IBM
+  * [joesepi](https://github.com/joesepi) -
+    **Joe Sepi** <<joesepi@ibm.com>> (he/him)
+  * [mhdawson](https://github.com/mhdawson) -
+    **Michael Dawson** <<midawson@redhat.com>> (he/him)
+
+## License
+
+Node.js is available under the
+[MIT license](https://opensource.org/licenses/MIT). Node.js also includes
+external libraries that are available under a variety of licenses.  See
+[LICENSE](https://github.com/nodejs/node/blob/HEAD/LICENSE) for the full
+license text.
+
+[Code of Conduct]: https://github.com/nodejs/admin/blob/HEAD/CODE_OF_CONDUCT.md
+[Contributing to the project]: CONTRIBUTING.md
+[Node.js website]: https://nodejs.org/
+[OpenJS Foundation]: https://openjsf.org/
+[Strategic initiatives]: doc/contributing/strategic-initiatives.md
+[Technical values and prioritization]: doc/contributing/technical-values.md
+[Working Groups]: https://github.com/nodejs/TSC/blob/HEAD/WORKING_GROUPS.md
